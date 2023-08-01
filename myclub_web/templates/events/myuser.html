@@ -1,0 +1,56 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+  <script src="https://kit.fontawesome.com/ffd1c3af63.js" crossorigin="anonymous"></script>
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1>Contact Us</h1>
+            <form method="POST" action="{% url 'myuser_pdf' %}">
+                {% csrf_token %}
+                <div>
+                    <label for="full_name">Full Name:</label>
+                    <input type="text" placeholder="full_name" name="full_name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="email" name="email" required>
+                </div>
+                <div>
+                    <label for="telephone">Telephone:</label>
+                    <input type="text" placeholder="telephone" name="telephone" required>
+                </div>
+                <div>
+                    <label for="subject">subject:</label>
+                    <input type="text" placeholder="subject" name="subject" required>
+                </div>    
+                <div>    
+                    <label for="location">location:</label>
+                    <input type="text" placeholder="Enter location" name="location" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="" cols="40" rows="10" placeholder="Your message" ></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p><i class="fa-solid fa-location-dot"></i><span>Address</span>: Your Company Address</p>
+            <p><i class="fa-solid fa-square-phone"></i><span>Phone</span>: 080XXXXXXX</p>
+            <p><i class="fa-regular fa-paper-plane"></i><span>Email</span>: contact@example.com</p>
+            <p><i class="fa-solid fa-globe"></i><span>Website</span>: www.yourcompany.com</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+{% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dardavy08</title>
+<link rel="stylesheet" href="{% static 'events/style.css' %}">
+<link rel="stylesheet" href="{% static 'events/3.PNG' %}">
+
+</head>
+
+<body>
+    <p class="#">Get in Touch</p>
+  <fieldset class="field">
+    <div class="login-box">
+           <!-- Section Heading -->
+           <div class="section-heading">
+                <h2>Write Us - {{ full_name }} </h2>
+                <div class="line"></div>
+           </div>
+           <!-- Form -->
+      <form method="post" action="{% url 'contact' %}">
+            {% csrf_token %}
+           <div class="row">
+             <div class="col-1">
+                <input type="text" name="full-name" 
+                class="form-control-5" placeholder="Full Name">
+             </div>
+
+             <div class="col-1">
+                <input type="email" name="message-email" 
+                class="form-control-5" placeholder="Email">
+             </div>
+
+             <div class="col-1">
+                <input type="phone" name="phone-num" 
+                class="form-control-5" placeholder="tel:xxx xxx xxxx">
+             </div>
+
+             <div class="col-12">
+                <textarea name="message" class="form-control-5" placeholder=
+                "Enter Your Message ..." ></textarea>
+             </div>
+             <div class="col-12">
+                <button
+                type="submit" class="btn-fom">Send Message</button>
+             </div>
+          </div>   
+       </form>
+    </div>
+   
+  </fieldset>  
+</body>
+</html>
