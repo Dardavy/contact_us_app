@@ -1,0 +1,103 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(#0e3c39, #612B78 );
+  font-family: 'Times New Roman', Times, serif;
+}
+
+form{
+  padding: 10px;
+  background-color: white;
+}
+
+.container{
+  background-color: white;
+  max-width: 400px;
+  margin: auto;
+  margin-top: 1%;
+  height: 80vh;
+  border-radius: 5px;
+}
+.header{
+  font-size: 20px;
+  text-align: center;
+
+}
+
+.form div input{
+  width: 100%;
+  border: 2px solid #c4c4c4;
+  border-radius: 8px;
+  outline: none;
+  padding: 5px 30px;
+  box-shadow: 2px 2px 4px rgba(0,  0,  0, 0.1);
+}
+
+
+.form div label{
+  margin-bottom: 5px;
+  display: block;
+  font-size: 15px;
+}
+
+.form div{
+  position: relative;
+  margin-bottom: 15px;
+  
+}
+
+
+
+/* style for icons */
+.form div i{
+  position: absolute;
+  padding: 10px;
+  
+}
+
+.success, .failure{
+  right: 0;
+  opacity: 0;
+}
+
+/* colour set for suuces and failure */
+
+.success{
+  color: green;
+}
+
+.failure{
+  color: red;
+}
+
+/* button design */
+button{
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #f2796e;
+  outline: none;
+  padding: 10px;
+  margin-top: 10px;
+  height: 45%;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bolder;
+  background-color: #f2796e;
+  
+}
+
+
+.error{
+  color: red;
+  font-size: 15px;
+} 
+
+
+button:hover{
+  background-color: #aa94ba;
+  transition: 1.2s;
+}
